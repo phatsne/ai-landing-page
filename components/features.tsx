@@ -104,7 +104,7 @@ export default function Features() {
                         alt=""
                         width={24}
                         height={24}
-                        className="w-5 h-5 flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 shrink-0 mt-0.5"
                       />
                       <span>{item}</span>
                     </li>

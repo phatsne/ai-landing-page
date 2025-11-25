@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem, RadioGroupIndicator } from "@radix-ui/react-radio-group"
 import { Camera, MessageSquare } from "lucide-react"
+import Book from "@/public/images/aiBook.jpg"
 import Image from "next/image"
 
 // THAY URL NÀY BẰNG URL GOOGLE APPS SCRIPT CỦA BẠN
@@ -37,7 +38,6 @@ export default function Hero() {
     }
   }
 
-  // THAY HOÀN TOÀN handleSubmit – chỉ thêm logic gửi Google Sheet
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
@@ -70,7 +70,7 @@ export default function Hero() {
             <p className="text-xl pb-6 ">Đăng ký để tải sách</p>
             <div className=" flex justify-center items-center">
               <Image
-                src="/images/aibook.jpg"
+                src={Book}
                 alt="AI Playbook"
                 width={452}
                 height={680}
@@ -120,7 +120,7 @@ export default function Hero() {
                         <RadioGroupIndicator className="w-3 h-3 bg-white rounded-full" />
                       </RadioGroupItem>
                       <MessageSquare className="text-blue-400 ml-3 mr-2" />
-                      <span className="text-white font-medium">Nhận tư vấn về Self-Host</span>
+                      <span className="text-white font-medium">Nhận tư vấn về AI Self-Host</span>
                     </label>
                   </RadioGroup>
                 </div>
@@ -171,7 +171,12 @@ export default function Hero() {
                   type="tel"
                   placeholder="+84"
                   value={formData.phone}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/\D/g, "");
+                    setFormData({ ...formData, phone: value });
+                  }}
+                  pattern="^(?:\+84|0)(3[2-9]|5[6|8|9]|7[0|6-9]|8[1-5]|9[0-9])[0-9]{7}$"
+                  title="Nhập số điện thoại Việt Nam hợp lệ, ví dụ: 0912345678 hoặc +84912345678"
                   className="mt-2 bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-white/20 text-white placeholder:text-white/50 rounded-lg h-[58px]"
                   required
                 />
@@ -192,8 +197,6 @@ export default function Hero() {
                   className="mt-2 bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-white/20 text-white placeholder:text-white/50 rounded-lg h-[58px]"
                 />
               </div>
-
-              {/* Corner Submit Button (bottom-right) */}
               <Button
                 type="submit"
                 disabled={isLoading}

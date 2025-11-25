@@ -1,8 +1,25 @@
 "use client"
 
 import { motion, useAnimation } from "framer-motion"
-import Img from "next/image"
+import Image from "next/image"
 import { useEffect, useState } from "react"
+import Partner1 from "@/public/images/partner/VnResource.jpg"
+import Partner2 from "@/public/images/partner/humannext1.png"
+import Partner3 from "@/public/images/partner/gumac.jpg"
+import Partner4 from "@/public/images/partner/propcom.png"
+import Partner5 from "@/public/images/partner/phuhunglogo.png"
+import Partner6 from "@/public/images/partner/aiking.png"
+import Partner7 from "@/public/images/partner/hvc.png"
+import Partner8 from "@/public/images/partner/pcg.png"
+import Partner9 from "@/public/images/partner/colina.png"
+import Partner10 from "@/public/images/partner/Grandemy.png"
+import Partner11 from "@/public/images/partner/Apac.png"
+import Partner12 from "@/public/images/partner/kiwooza.png"
+import Partner13 from "@/public/images/partner/thangloi.png"
+import Partner14 from "@/public/images/partner/NNI.png"
+import Partner15 from "@/public/images/partner/pacisoft.png"
+import Partner16 from "@/public/images/partner/phuonganh.jpg"
+import Partner17 from "@/public/images/partner/Eagle_ventures.png"
 
 export default function PartnersSection() {
   const controls = useAnimation()
@@ -38,23 +55,23 @@ export default function PartnersSection() {
   }, [controls])
 
   const logos = [
-    { src: "VnResource.jpg", top: "5%", left: "0%", width: 120, height: 120 },
-    { src: "humannext1.png", top: "5%", left: "20%", width: 150, height: 150 },
-    { src: "gumac.jpg", top: "5%", left: "40%", width: 150, height: 150 },
-    { src: "propcom.png", top: "0%", left: "55%", width: 100, height: 100 },
-    { src: "phuhunglogo.png", top: "20%", left: "62%", width: 120, height: 120 },
-    { src: "aiking.png", top: "0%", left: "75%", width: 120, height: 120 },
-    { src: "hvc.png", top: "10%", left: "90%", width: 100, height: 100 },
-    { src: "pcg.png", top: "30%", left: "90%", width: 100, height: 100 },
-    { src: "colina.png", top: "50%", left: "80%", width: 120, height: 120 },
-    { src: "Grandemy.png", top: "75%", left: "85%", width: 120, height: 120 },
-    { src: "Apac.png", top: "82%", left: "73%", width: 100, height: 100 },
-    { src: "kiwooza.png", top: "70%", left: "55%", width: 150, height: 150 },
-    { src: "thangloi.png", top: "65%", left: "40%", width: 150, height: 150 },
-    { src: "NNI.png", top: "75%", left: "27%", width: 100, height: 100 },
-    { src: "pacisoft.png", top: "72%", left: "8%", width: 160, height: 160 },
-    { src: "phuonganh.jpg", top: "50%", left: "0%", width: 130, height: 130 },
-    { src: "Eagle_ventures.png", top: "25%", left: "5%", width: 150, height: 150 },
+    { src: Partner1, name: "VnResource", top: "5%", left: "0%", width: 120, height: 120 },
+    { src: Partner2, name: "HumanNext", top: "5%", left: "20%", width: 150, height: 150 },
+    { src: Partner3, name: "Gumac", top: "5%", left: "40%", width: 150, height: 150 },
+    { src: Partner4, name: "PropCom", top: "0%", left: "55%", width: 100, height: 100 },
+    { src: Partner5, name: "PhuHung", top: "20%", left: "62%", width: 120, height: 120 },
+    { src: Partner6, name: "AIKing", top: "0%", left: "75%", width: 120, height: 120 },
+    { src: Partner7, name: "HVC", top: "10%", left: "90%", width: 100, height: 100 },
+    { src: Partner8, name: "PCG", top: "30%", left: "90%", width: 100, height: 100 },
+    { src: Partner9, name: "Colina", top: "50%", left: "80%", width: 120, height: 120 },
+    { src: Partner10, name: "Grandemy", top: "75%", left: "85%", width: 120, height: 120 },
+    { src: Partner11, name: "Apac", top: "82%", left: "73%", width: 100, height: 100 },
+    { src: Partner12, name: "Kiwooza", top: "70%", left: "55%", width: 150, height: 150 },
+    { src: Partner13, name: "ThangLoi", top: "65%", left: "40%", width: 150, height: 150 },
+    { src: Partner14, name: "NNI", top: "75%", left: "27%", width: 100, height: 100 },
+    { src: Partner15, name: "PaciSoft", top: "72%", left: "8%", width: 160, height: 160 },
+    { src: Partner16, name: "PhuongAnh", top: "50%", left: "0%", width: 130, height: 130 },
+    { src: Partner17, name: "Eagle Ventures", top: "25%", left: "5%", width: 150, height: 150 },
   ]
 
   return (
@@ -83,13 +100,12 @@ export default function PartnersSection() {
                 height: `${h * scale}px`,
               }}
             >
-              <Img
-                src={`/images/partner/${logo.src}`}
-                alt={logo.src.replace(/\.[^/.]+$/, "")}
+              <Image
+                src={logo.src}
+                alt={logo.name}
                 width={w}
                 height={h}
                 className="object-contain hover:scale-110 transition-transform duration-300"
-                unoptimized
               />
             </div>
           )

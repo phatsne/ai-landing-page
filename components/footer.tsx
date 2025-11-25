@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Linkedin, Facebook, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0E27] text-white py-16 md:py-20">
+    <footer id="about" className="bg-[#0A0E27] text-white py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Cột 1: Logo + Contact */}
@@ -30,11 +30,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+84 xxx xxx xxx</span>
+                <span>0383448963</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>[Địa chỉ văn phòng]</span>
+                <span>107 đường số 2 Vạn Phúc City Phường Hiệp Bình thành Phố Thủ Đức</span>
               </div>
             </div>
           </div>
