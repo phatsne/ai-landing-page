@@ -135,7 +135,7 @@ export default function Hero() {
                   id="company"
                   name="company"
                   type="text"
-                  placeholder="Nhập tên công ty"
+                  placeholder="Tên công ty của bạn"
                   value={formData.company}
                   onChange={handleChange}
                   className="mt-2 bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-white/20 text-white placeholder:text-white/50 rounded-lg h-[58px]"
@@ -152,7 +152,7 @@ export default function Hero() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="your@company.com"
+                  placeholder="Email của bạn"
                   value={formData.email}
                   onChange={handleChange}
                   className="mt-2 bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-white/20 text-white placeholder:text-white/50 rounded-lg h-[58px]"
@@ -169,7 +169,7 @@ export default function Hero() {
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="+84"
+                  placeholder="Số điện thoại của bạn"
                   value={formData.phone}
                   onChange={(e) => {
                     const value = e.target.value.replace(/\D/g, "");
@@ -191,7 +191,7 @@ export default function Hero() {
                   id="industry"
                   name="industry"
                   type="text"
-                  placeholder="Ví dụ: Công nghệ, Tài chính..."
+                  placeholder="Lĩnh vực nghề nghiệp của bạn"
                   value={formData.industry}
                   onChange={handleChange}
                   className="mt-2 bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-white/20 text-white placeholder:text-white/50 rounded-lg h-[58px]"
