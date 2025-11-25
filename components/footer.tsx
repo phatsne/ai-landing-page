@@ -1,8 +1,13 @@
 "use client"
 
 import Image from "next/image"
-import LogoInnovers from "@/public/images/Innoverse.png"
-import { Mail, Phone, MapPin, Linkedin, Facebook, Youtube } from "lucide-react"
+import LogoInnoverse from "@/public/images/Innoverse.png"
+import Mail from "@/public/Icon/mail.png"
+import Phone from "@/public/Icon/phone.png"
+import MapPin from "@/public/Icon/address.png"
+import Linkedin from "@/public/Icon/linkedin.png"
+import Facebook from "@/public/Icon/facebook.png"
+import Youtube from "@/public/Icon/youtube.png"
 
 export default function Footer() {
   return (
@@ -13,7 +18,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <Image
-                src={LogoInnovers}
+                src={LogoInnoverse}
                 alt="InnoVerse Logo"
                 width={168}
                 height={48}
@@ -25,15 +30,30 @@ export default function Footer() {
 
             <div className="space-y-4 text-sm">
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Image
+                  src={Mail}
+                  alt="InnoVerse Logo"
+                  width={16}
+                  height={16}
+                />
                 <span>contact@innoverse.vn</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Image
+                  src={Phone}
+                  alt="InnoVerse Logo"
+                  width={16}
+                  height={16}
+                />
                 <span>0383448963</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+                <Image
+                  src={MapPin}
+                  alt="InnoVerse Logo"
+                  width={16}
+                  height={16}
+                />
                 <span>107 đường số 2 Vạn Phúc City Phường Hiệp Bình thành Phố Thủ Đức</span>
               </div>
             </div>
@@ -120,14 +140,29 @@ export default function Footer() {
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              <Linkedin className="w-5 h-5" />
+            <a href="#">
+              <Image
+                src={Linkedin}
+                alt="InnoVerse Linkedin"
+                width={40}
+                height={40}
+              />
             </a>
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              <Facebook className="w-5 h-5" />
+            <a href="https://www.facebook.com/profile.php?id=61576051156995">
+              <Image
+                src={Facebook}
+                alt="InnoVerse Facebook"
+                width={40}
+                height={40}
+              />
             </a>
-            <a href="#" className="hover:text-cyan-400 transition-colors">
-              <Youtube className="w-5 h-5" />
+            <a href="#">
+              <Image
+                src={Youtube}
+                alt="InnoVerse Youtube"
+                width={40}
+                height={40}
+              />
             </a>
           </div>
         </div>

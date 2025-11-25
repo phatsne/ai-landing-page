@@ -13,8 +13,8 @@ export const Navbar = () => {
   const pathname = usePathname()
 
   const navItems = [
-    { label: "Giải pháp", href: "#solution" },
-    { label: "Use Cases", href: "#usecases" },
+    { label: "Giải pháp", href: "#features" },
+    { label: "Use Cases", href: "#process" },
     { label: "Về chúng tôi", href: "#about" },
     { label: "Câu hỏi", href: "#faq" },
   ]
@@ -59,9 +59,11 @@ export const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button className="bg-linear-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white text-base rounded-full px-6 py-2 font-semibol min-w-[178px] h-[58]">
-              Đặt lịch Demo
-            </Button>
+            <Link href="#home">
+              <Button className="bg-linear-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white text-base rounded-full px-6 py-2 font-semibol min-w-[178px] h-[58]">
+                Đặt lịch Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,9 +86,11 @@ export const Navbar = () => {
               </Link>
             ))}
             <div className="px-4 pt-4">
-              <Button className="w-full bg-linear-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white rounded-full py-2 font-semibold">
-                Đặt lịch Demo
-              </Button>
+              <Link href="#home">
+                <Button className="w-full bg-linear-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white rounded-full py-2 font-semibold">
+                  Đặt lịch Demo
+                </Button>
+              </Link>
             </div>
           </div>
         )}
